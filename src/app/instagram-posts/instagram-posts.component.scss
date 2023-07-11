@@ -1,0 +1,42 @@
+$border-radius-on-images: 25px;
+$caption-padding-size:    10px;
+
+.instagram {
+  &__list {
+    display: grid;
+    justify-content: center;
+    margin: 0 auto;
+    width: 50vw;
+  }
+
+  &__thumbnail { }
+
+  &__image {
+    background-color: black;
+    border-radius: $border-radius-on-images;
+    box-shadow: 0 0px 8px rgba(black, .5);
+    opacity: .75;
+    transition: opacity .5s ease-in-out;
+
+    &:hover,
+    &:focus {
+      opacity: 1;
+    }
+  }
+
+  &__caption {
+    background-color: rgba(white, .8);
+    border-bottom-left-radius: $border-radius-on-images;
+    border-bottom-right-radius: $border-radius-on-images;
+    bottom: ((20px - 1px) + ($caption-padding-size * 2));
+    padding: $caption-padding-size 0;
+    position: relative;
+    text-align: center;
+  }
+}
+
+video {
+  background-color: black;
+  border-radius: $border-radius-on-images;
+  box-shadow: 0 0px 8px rgba(black, .5);
+}

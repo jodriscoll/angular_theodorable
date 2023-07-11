@@ -1,1 +1,28 @@
-/* You can add global styles to this file, and also import other style files */
+html {
+  font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 14px;
+  color: #333;
+  background: linear-gradient(to bottom, #000000, #262626, #3f3f3f, #5b5b5b, #30336b );
+	background-size: 100%;
+	background-repeat: no-repeat;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  &::before {
+    content:'';
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: -1;
+    background: linear-gradient(to right bottom, rgba(12, 14, 45, 0.2), #353b56 75%);
+  }
+}

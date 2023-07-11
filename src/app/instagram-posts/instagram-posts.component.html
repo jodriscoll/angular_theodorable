@@ -1,0 +1,21 @@
+<div class="instagram__list" *ngFor="let post of posts">
+  <ng-container *ngIf="post.media_type === 'IMAGE'">
+    <figure class="instagram__thumbnail">
+      <img [src]="post.media_url"
+        [alt]="post.caption"
+        class="instagram__image"
+        width="720"
+        height="auto" />
+        <figcaption class="instagram__caption">{{ post.caption }}</figcaption>
+    </figure>
+  </ng-container>
+  <ng-container *ngIf="post.media_type === 'VIDEO'">
+    <figure>
+      <video [src]="post.media_url"
+        class="instagram__video"
+        width="720"
+        height="auto" controls></video>
+      <figcaption>{{ post.caption }}</figcaption>
+    </figure>
+  </ng-container>
+</div>
