@@ -20,7 +20,7 @@ export class InstagramPostsComponent implements OnInit {
   // Fetches posts from Instagram.
   fetchInstagramPosts() {
     // Unique access token generated.
-    const accessToken = process.env.ACCESS_TOKEN;
+    const accessToken = process.env['ACCESS_TOKEN'];
     // Instagram Graph API endpoint.
     const endpoint = `https://graph.instagram.com/me/media?fields=id,caption,media_type,media_url&access_token=${accessToken}`;
 
